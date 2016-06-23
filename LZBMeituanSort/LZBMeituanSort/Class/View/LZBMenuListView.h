@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@interface LZBSigneMenu : UIView
+
+@property (nonatomic, strong) UIButton *btn;
+
+@property (nonatomic, strong) UIView *lineView;
+
+@end
+
+
 @interface LZBMenuListView : UIView
 
 - (instancetype)initWithListArray:(NSArray *)array;
+
+- (void)showPoint:(CGPoint)point WithInView:(UIView *)partentView;
+
 @end

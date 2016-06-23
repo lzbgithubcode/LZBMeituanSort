@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LZBFoodTableViewCell.h"
 #import "LZBChooseView.h"
+#import "LZBMenuListView.h"
 
 static NSString *LZBFoodTableViewCellID = @"LZBFoodTableViewCellID";
 
@@ -17,6 +18,8 @@ static NSString *LZBFoodTableViewCellID = @"LZBFoodTableViewCellID";
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *foodModes;
+
+@property (nonatomic, strong) LZBMenuListView  *listView;
 
 @end
 
@@ -67,7 +70,8 @@ static NSString *LZBFoodTableViewCellID = @"LZBFoodTableViewCellID";
     chooseView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height);
     
     [chooseView setClickChooseView:^(LZBChooseViewType type) {
-        
+       
+        [self.listView showPoint:CGPointMake([UIScreen mainScreen].bounds.size.width-10-70, height) WithInView:self.view];
     }];
     return chooseView;
     
@@ -79,6 +83,16 @@ static NSString *LZBFoodTableViewCellID = @"LZBFoodTableViewCellID";
 }
 
 
+
+- (LZBMenuListView *)listView
+{
+  if(_listView == nil)
+  {
+       NSArray *array = @[@"价格排序",@"评分排序",@"智能排序"];
+      _listView = [[LZBMenuListView alloc]initWithListArray:array];
+  }
+    return _listView;
+}
 
 - (UITableView *)tableView
 {
