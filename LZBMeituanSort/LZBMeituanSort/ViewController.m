@@ -69,9 +69,15 @@ static NSString *LZBFoodTableViewCellID = @"LZBFoodTableViewCellID";
     CGFloat height = [self tableView:tableView heightForHeaderInSection:section];
     chooseView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height);
     
+    __weak typeof(chooseView)  weakChooseView  = chooseView;
     [chooseView setClickChooseView:^(LZBChooseViewType type) {
        
         [self.listView showPoint:CGPointMake([UIScreen mainScreen].bounds.size.width-10-70, height) WithInView:self.view];
+        
+        [self.listView setMemuClick:^(LZBMenuListViewType type, NSString *text) {
+            weakChooseView.titles = @[text,text,text];
+        }];
+        
     }];
     return chooseView;
     

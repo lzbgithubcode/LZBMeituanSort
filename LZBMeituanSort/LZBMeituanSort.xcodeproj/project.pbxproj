@@ -22,6 +22,7 @@
 		18574C331D16DEE5006E8E5E /* foodsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18574C321D16DEE5006E8E5E /* foodsList.plist */; };
 		18574C3A1D16E674006E8E5E /* LZBFoodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18574C381D16E674006E8E5E /* LZBFoodTableViewCell.m */; };
 		18574C3B1D16E674006E8E5E /* LZBFoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18574C391D16E674006E8E5E /* LZBFoodTableViewCell.xib */; };
+		18ECE0C91D2006B9007F5CD6 /* UIView+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ECE0C81D2006B9007F5CD6 /* UIView+Method.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		18574C371D16E674006E8E5E /* LZBFoodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBFoodTableViewCell.h; sourceTree = "<group>"; };
 		18574C381D16E674006E8E5E /* LZBFoodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBFoodTableViewCell.m; sourceTree = "<group>"; };
 		18574C391D16E674006E8E5E /* LZBFoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZBFoodTableViewCell.xib; sourceTree = "<group>"; };
+		18ECE0C71D2006B9007F5CD6 /* UIView+Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Method.h"; sourceTree = "<group>"; };
+		18ECE0C81D2006B9007F5CD6 /* UIView+Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Method.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		18574C2B1D16DE16006E8E5E /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				18ECE0C61D200683007F5CD6 /* Category */,
 				1851DD971D1833E400DCA70C /* Resource */,
 				18574C2C1D16DE16006E8E5E /* Model */,
 				18574C2D1D16DE16006E8E5E /* View */,
@@ -152,6 +156,15 @@
 			children = (
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		18ECE0C61D200683007F5CD6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18ECE0C71D2006B9007F5CD6 /* UIView+Method.h */,
+				18ECE0C81D2006B9007F5CD6 /* UIView+Method.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +249,7 @@
 				18574C191D16DD5F006E8E5E /* AppDelegate.m in Sources */,
 				1851DD961D18302F00DCA70C /* LZBMenuListView.m in Sources */,
 				18574C161D16DD5F006E8E5E /* main.m in Sources */,
+				18ECE0C91D2006B9007F5CD6 /* UIView+Method.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

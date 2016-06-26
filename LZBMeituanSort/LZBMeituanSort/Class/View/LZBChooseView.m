@@ -89,19 +89,19 @@
 {
   if(self = [super init])
   {
+      [self  setUpUIWithTitles:titles];
       self.titles = titles;
-      [self  setUpUI];
+      
       self.backgroundColor = [UIColor whiteColor];
   }
     return self;
 }
 
--(void)setUpUI
+-(void)setUpUIWithTitles:(NSArray *)titles
 {
-    NSInteger count = self.titles.count;
+    NSInteger count = titles.count;
     for (NSInteger i = 0; i < count; i++) {
         LZBSingleView *single = [[LZBSingleView alloc]init];
-        single.title =  self.titles[i];
         single.tag = i;
         [self addSubview:single];
         [single.btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -109,6 +109,17 @@
         
     }
  
+}
+
+- (void)setTitles:(NSArray<NSString *> *)titles
+{
+    if(titles.count == 0) return;
+    _titles = titles;
+    for (NSInteger i = 0; i < titles.count; i++) {
+        LZBSingleView *single = self.subviews[i];
+        single.title =  titles[i];
+    }
+    
 }
 
 - (void)btnClick:(UIButton *)btn
