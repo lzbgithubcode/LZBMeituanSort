@@ -190,7 +190,6 @@ static NSString *LZBFoodTableViewCellID = @"LZBFoodTableViewCellID";
              [self.foodModes replaceObjectAtIndex:j withObject:model_i];
         }
     }
-    
     //如果相遇了
     self.foodModes[left] = self.foodModes[i];
     self.foodModes[i] = tempModel;
